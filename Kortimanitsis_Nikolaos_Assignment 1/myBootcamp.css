@@ -1,0 +1,49 @@
+.welcome-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+table.table-add tr > td:first-child{
+    text-align: right; 
+}
+
+table.table-add tr > td:last-child{
+    text-align: left; 
+    width: 80%;
+}
+
+table.table-add tr > td:last-child > input{
+  width: 50%;
+}
+
+table.table-add tr > td:last-child > select{
+  width: 40%;
+}
+
+.error{
+  color: #b30000;
+}
+
+table.table-list, table.table-list td, table.table-list th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 15px;
+}
+
+table.table-list {
+    border-collapse: collapse;
+    width: 100%;
+}
+	
+.panel-body {
+    background-color: #f0f5f5;
+}
+
+.btn-delete-all{
+  text-align: right;
+}

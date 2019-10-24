@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootcamp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="./lib/bootstrap-3.3.7/js/bootstrap.js"></script>
+<script type="text/javascript" src="Students.js"></script>
+<link rel="stylesheet" type="text/css" href="myBootcamp.css">
+<link rel="stylesheet" type="text/css" href="./lib/bootstrap-3.3.7/css/bootstrap.css">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="Bootcamp_School.html">Bootcamp_School</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="Assignments.html">Assignments</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="Trainers.html">Trainers<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Trainers.html">Add new Trainer</a></li>
+                    <li><a href="Trainers_Assigned_Courses.html">Assign Course</a></li>
+                </ul>
+            </li>
+            <li class="active dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="Students.html">Students<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Students.html">Add new Student</a></li>
+                    <li><a href="Students_Subscribed_Courses.html">Subscribe to Course</a></li>
+                </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="Bootcamp_School.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="Bootcamp_School.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" style="margin-left: 0px; width: 700px;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Add a new Student</h4>
+            </div>
+            <div class="panel-body">
+                <form action="#" name="add-student" id="add-student" class="validate-form">
+                    <table class="table table-bordered table-condensed table-add">
+                        <tr>
+                            <td><label for="student-fName">First Name:</label></td>
+                            <td><input required type="text" minlength="1" maxlength="30" name="student-fName"  id="student-fName" value="" placeholder="1 to 30 characters"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="student-lName">Last Name:</label></td>
+                            <td><input required type="text" minlength="1" maxlength="30" name="student-lName" id="student-lName" value="" placeholder="1 to 30 characters"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="student-date">Date of Birth:</label></td>
+                            <td><input required type="date" name="student-date" id="student-date" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="student-fees">Tuition Fees:</label></td>
+                            <td><input required type="number" name="student-fees" id="student-fees" value=""></td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-primary" style="width: 30%" value="Add" id="addToStudentTable" type="button"> Add </button>
+                    <button class="btn btn-primary" style="width: 30%" value="Reset" type="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-left: 0px;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1">Student List</a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <table class="table table-bordered table-striped table-list" name="student-list-table" id="student-list-table"> 
+                    <thead>
+                        <th>Select</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Date of Birth (yyyy/mm/dd)</th>
+                        <th>Tuition Fees (&euro;)</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <button class="btn btn-danger btn-delete-all" value="Delete Row(s)" type="button">Delete Row(s)</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+      
+</body>
+</html>
+
+

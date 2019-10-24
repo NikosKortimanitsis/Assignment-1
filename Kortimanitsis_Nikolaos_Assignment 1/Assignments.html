@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootcamp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./lib/jquery.validate.min.js"></script>
+<script type="text/javascript" src="./lib/bootstrap-3.3.7/js/bootstrap.js"></script>
+<script type="text/javascript" src="Assignments.js"></script>
+<link rel="stylesheet" type="text/css" href="myBootcamp.css">
+<link rel="stylesheet" type="text/css" href="./lib/bootstrap-3.3.7/css/bootstrap.css">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="Bootcamp_School.html">Bootcamp_School</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="Courses.html">Courses</a></li>
+            <li class="active"><a href="Assignments.html">Assignments</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="Trainers.html">Trainers<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="Trainers.html">Add new Trainer</a></li>
+                  <li><a href="Trainers_Assigned_Courses.html">Assign Course</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="Students.html">Students<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Students.html">Add new Student</a></li>
+                    <li><a href="Students_Subscribed_Courses.html">Subscribe to Course</a></li>
+                </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="Bootcamp_School.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="Bootcamp_School.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container" style="margin-left: 0px; width: 700px;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Add a new Assignment</h4>
+            </div>
+            <div class="panel-body">
+                <form action="#" name="add-assignment" id="add-assignment" class="validate-form">
+                    <table class="table table-bordered table-condensed table-add">
+                        <tr>
+                            <td><label for="assignment-title">Title:</label></td>
+                            <td><input required type="text" minlength="1" maxlength="30" name="assignment-title"  id="assignment-title" value="" placeholder="1 to 30 characters"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="assignment-description">Description:</label></td>
+                            <td><input required type="text" minlength="1" maxlength="30" name="assignment-description" id="assignment-description" value="" placeholder="1 to 30 characters"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="assignment-sub-date">Submission Date:</label></td>
+                            <td><input required type="date" name="assignment-sub-date" id="assignment-sub-date" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="assignment-course">Course:</label></td>
+                            <td>
+                                <select name="assignment-course" id="assignment-course">
+                                <option value="Java" selected>Java</option>
+                                <option value="C#">C#</option>
+                                <option value="Python">Python</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td><label for="assignment-oral-mark">Oral Mark:</label></td>
+                            <td><input type="number" name="assignment-oral-mark" id="assignment-oral-mark" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><label for="assignment-total-mark">Total Mark:</label></td>
+                            <td><input type="number" name="assignment-total-mark" id="assignment-total-mark" value=""></td>
+                        </tr> -->
+                    </table>
+                    <button class="btn btn-primary" style="width: 30%" value="Add" id="addToAssignmentTable" type="button"> Add </button>
+                    <button class="btn btn-primary" style="width: 30%" value="Reset" type="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-left: 0px;">
+    <div class="panel-group">
+        <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1">Assignment List</a>
+            </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <table class="table table-bordered table-striped table-list" name="assignment-list-table" id="assignment-list-table">
+                    <thead>
+                        <th>Select</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Submission Date (yyyy/mm/dd)</th>
+                        <th>Course</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <button class="btn btn-danger btn-delete-all" value="Delete Row(s)" type="button">Delete Row(s)</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+      
+</body>
+</html>
+
+
